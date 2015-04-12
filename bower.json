@@ -1,0 +1,17 @@
+{
+  "name": "angular-typeahead",
+  "version": "0.1.0",
+  "authors": [
+    "osadan <sadanoh@gmail.com>"
+  ],
+  "description": "typeahead directive for displying filtered content",
+  "main": "src/typeahead.directive",
+  "dependencies": {
+    "angular": ">=1.3.0"
+  },
+  "keywords": [
+    "angular",
+    "typeahead"
+  ],
+  "license": "MIT"
+}
