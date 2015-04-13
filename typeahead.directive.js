@@ -21,7 +21,7 @@
 ;(function () {
 	'use strict';
 
-	angular.module('foneDo')
+	angular.module('oss')
         .directive('typeahead', ['$document', function($document) {
             var hotkeys = {
                 9: {
@@ -42,7 +42,7 @@
             };
 			return {
                 restrict: 'AE',
-                template: "<input type='text'  ng-model='typeahead.model' class='fonedo search-box' ng-keydown='typeahead.selected = false;' placeholder='{{::prompt}}'/>",
+                template: "<input type='text'  ng-model='typeahead.model' class='search-box' ng-keydown='typeahead.selected = false;' placeholder='{{::prompt}}'/>",
                 transclude: true,
                 scope: {
                     itemSelected: '&',

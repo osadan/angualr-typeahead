@@ -1,6 +1,6 @@
 ;(function () {
 	'use strict';
-	angular.module('foneDo')
+	angular.module('oss')
 		.directive('typeaheadItem', [function () {
         return {
             restrict: 'AE',

@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src='index.js'></script>
+	<script src='../typeahead.directive.js'></script>
+	<script src='../typeahead-item.directive.js'></script>
+</head>
+<body ng-app='oss' ng-controller='typeaheadController as typeahead'>
+		
+		<div typeahead list='typeahead.getDemoData' 
+			 class='autocomplete-region' 
+			 display-key="value" 
+			 prompt='Enter city, state or area code' 
+			 list-container-class="search-results" 
+			 item-selected='typeahead.itemSelected(item)'>
+			<ul class='search-results' ng-show="typeahead.toDisplay()">
+				<li typeahead-item 
+				ng-repeat='item in typeahead.filtered =  (typeahead.list | filter:typeahead.model) track by item.key' 
+				item="{{::item}}" 
+				index="{{$index}}" 
+				ng-class="{'selected':typeahead.isCurrent($index)}"  class="autocomplete-item fr"><span>{{::item.value}}</span>
+				</li>
+			</ul>
+		</div>
+
+</body>
+</html>
